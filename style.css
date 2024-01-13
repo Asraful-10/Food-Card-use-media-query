@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+
+*{      
+    /* 
+     */
+
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+   
+} 
+.food-continer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 20px;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    
+}
+.food-card{
+    width: 320px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.food-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+.food-description{
+    position: absolute;
+    top: 70%;
+    background-color: #6c7a89;
+    padding: 12px 0px;
+    border-radius: 0 0 5px 5px;
+    display: none;
+}
+.food-card:hover .food-description{
+    display: block ;
+    
+}
+.food-description h2{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-family: 'Montaga', serif;
+}
+.food-description p{
+    color: #f0f8ffec;
+}
+.food-description h3{
+    color: rgb(253, 249, 249);
+}
+.food-card:hover .food-description h3{
+    transform:scale(1.3);
+    /* transition: transform 2s ease-in-out 5s;  */
+}
+
+span{
+    color: rgba(255, 0, 0, 0.822);
+}
+
+@media (max-width:700px) {
+    .food-continer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .food-card{
+        width: 210px;
+        height: 260px;
+      
+    }
+    .food-card img {
+       object-fit: cover;
+       width: 100%;
+       height: 100%;
+    }
+    .food-description{
+        top: 65.5%;
+        position: absolute;
+    }
+    .food-description h2{
+        font-size: 1em;
+    }
+   .food-description p{
+    font-size: 12px;
+   }
+   .food-description h3{
+    font-size: 14px;
+   }
+
+}
+@media (min-width:701px) {
+    .food-continer{
+        background-color: black;
+    }
+    
+}
